@@ -1,0 +1,28 @@
+{
+   "groups": [
+      {
+         "name": "Health and beauty",
+         "id": 1
+      },
+      {
+         "name": "Toys",
+         "id": 2
+      },
+      {
+         "name": "Dairy",
+         "id": 3
+      },
+      {
+         "name": "Computers",
+         "id": 4
+      },
+      {
+         "name": "Electronics",
+         "id": 5
+      },
+      {
+         "name": "Home",
+         "id": 6
+      }
+   ]
+}
