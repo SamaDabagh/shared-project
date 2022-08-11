@@ -31,7 +31,7 @@ class ProductInformationPage extends Component {
     return (
       <>
         <Header />
-        <ProductInformationContainer product={this.products} />
+        <ProductInformationContainer product={this.state.products} />
         <Footer />
       </>
     );
