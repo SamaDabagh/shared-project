@@ -1,121 +1,121 @@
 {
-    "products": {
-        "1001" :{
-            "name": "Dove Shampoo",
-            "group": 1,
-            "price": "12.99",
-            "reducedPrice": "12.99",
-            "minOrder": 1,
-            "canBeSold": true,
-            "pricePreFix": "CAD"
-        },
-        "1002" :{
-            "name": "Kirkland Shampoo",
-            "group": 1,
-            "price": "18.49",
-            "reducedPrice": "12.49",
-            "minOrder": 2,
-            "canBeSold": true,
-            "pricePreFix": "CAD"
-        },
-        "1003" :{
-            "name": "Safeblend Foam Soap",
-            "group": 1,
-            "price": "64.99",
-            "reducedPrice": "64.99",
-            "minOrder": 1,
-            "canBeSold": false,
-            "pricePreFix": "CAD"
-        },
-        "2001" :{
-            "name": "Pokemon Orbeetle",
-            "group": 2,
-            "price": "28.99",
-            "reducedPrice": "28.99",
-            "minOrder": 1,
-            "canBeSold": true,
-            "pricePreFix": "CAD"
-        },
-        "2002" :{
-            "name": "Eurographics 2-pack Puzzle Set",
-            "group": 2,
-            "price": "33.89",
-            "reducedPrice": "33.89",
-            "minOrder": 1,
-            "canBeSold": true,
-            "pricePreFix": "CAD"
-        },
-        "3001" :{
-            "name": "Kirkland Yogurt",
-            "group": 1,
-            "price": "4.99",
-            "reducedPrice": "3.99",
-            "minOrder": 1,
-            "canBeSold": true,
-            "pricePreFix": "CAD"
-        },
-        "3002" :{
-            "name": "Almond Milk",
-            "group": 1,
-            "price": "3.99",
-            "reducedPrice": "0.99",
-            "minOrder": 1,
-            "canBeSold": false,
-            "pricePreFix": "CAD"
-        },
-        "4001" :{
-            "name": "Asus Zenbook 4",
-            "group": 4,
-            "price": "1299.99",
-            "reducedPrice": "1399.99",
-            "minOrder": 1,
-            "canBeSold": true,
-            "pricePreFix": "CAD"
-        },
-        "4002" :{
-            "name": "Macbook pro 2000",
-            "group": 1,
-            "price": "3999.79",
-            "reducedPrice": "3799.79",
-            "minOrder": 1,
-            "canBeSold": true,
-            "pricePreFix": "CAD"
-        },
-        "5001" :{
-            "name": "LG TV",
-            "group": 5,
-            "price": "899.89",
-            "reducedPrice": "899.89",
-            "minOrder": 1,
-            "canBeSold": true,
-            "pricePreFix": "CAD"
-        },
-        "5002" :{
-            "name": "Samsung TV",
-            "group": 5,
-            "price": "1299.89",
-            "reducedPrice": "1099.89",
-            "minOrder": 1,
-            "canBeSold": false,
-            "pricePreFix": "CAD"
-        },
-        "6001" :{
-            "name": "IKEA Sofa set",
-            "group": 6,
-            "price": "4099.99",
-            "reducedPrice": "4099.99",
-            "minOrder": 1,
-            "canBeSold": true,
-            "pricePreFix": "CAD"
-        },
-        "6002" :{
-            "name": "Tomasville Dining Table",
-            "group": 5,
-            "price": "3299.99",
-            "reducedPrice": "3099.99",
-            "minOrder": 1,
-            "canBeSold": true,
-            "pricePreFix": "CAD"
-        }
+  "products": {
+    "1001": {
+      "name": "Dove Shampoo",
+      "group": 1,
+      "price": "12.99",
+      "reducedPrice": "12.99",
+      "minOrder": 1,
+      "canBeSold": true,
+      "pricePreFix": "CAD"
+    },
+    "1002": {
+      "name": "Kirkland Shampoo",
+      "group": 1,
+      "price": "18.49",
+      "reducedPrice": "12.49",
+      "minOrder": 2,
+      "canBeSold": true,
+      "pricePreFix": "CAD"
+    },
+    "1003": {
+      "name": "Safeblend Foam Soap",
+      "group": 1,
+      "price": "64.99",
+      "reducedPrice": "64.99",
+      "minOrder": 1,
+      "canBeSold": false,
+      "pricePreFix": "CAD"
+    },
+    "2001": {
+      "name": "Pokemon Orbeetle",
+      "group": 2,
+      "price": "28.99",
+      "reducedPrice": "28.99",
+      "minOrder": 1,
+      "canBeSold": true,
+      "pricePreFix": "CAD"
+    },
+    "2002": {
+      "name": "Eurographics 2-pack Puzzle Set",
+      "group": 2,
+      "price": "33.89",
+      "reducedPrice": "33.89",
+      "minOrder": 1,
+      "canBeSold": true,
+      "pricePreFix": "CAD"
+    },
+    "3001": {
+      "name": "Kirkland Yogurt",
+      "group": 1,
+      "price": "4.99",
+      "reducedPrice": "3.99",
+      "minOrder": 1,
+      "canBeSold": true,
+      "pricePreFix": "CAD"
+    },
+    "3002": {
+      "name": "Almond Milk",
+      "group": 1,
+      "price": "3.99",
+      "reducedPrice": "0.99",
+      "minOrder": 1,
+      "canBeSold": false,
+      "pricePreFix": "CAD"
+    },
+    "4001": {
+      "name": "Asus Zenbook 4",
+      "group": 4,
+      "price": "1299.99",
+      "reducedPrice": "1399.99",
+      "minOrder": 1,
+      "canBeSold": true,
+      "pricePreFix": "CAD"
+    },
+    "4002": {
+      "name": "Macbook pro 2000",
+      "group": 1,
+      "price": "3999.79",
+      "reducedPrice": "3799.79",
+      "minOrder": 1,
+      "canBeSold": true,
+      "pricePreFix": "CAD"
+    },
+    "5001": {
+      "name": "LG TV",
+      "group": 5,
+      "price": "899.89",
+      "reducedPrice": "899.89",
+      "minOrder": 1,
+      "canBeSold": true,
+      "pricePreFix": "CAD"
+    },
+    "5002": {
+      "name": "Samsung TV",
+      "group": 5,
+      "price": "1299.89",
+      "reducedPrice": "1099.89",
+      "minOrder": 1,
+      "canBeSold": false,
+      "pricePreFix": "CAD"
+    },
+    "6001": {
+      "name": "IKEA Sofa set",
+      "group": 6,
+      "price": "4099.99",
+      "reducedPrice": "4099.99",
+      "minOrder": 1,
+      "canBeSold": true,
+      "pricePreFix": "CAD"
+    },
+    "6002": {
+      "name": "Tomasville Dining Table",
+      "group": 5,
+      "price": "3299.99",
+      "reducedPrice": "3099.99",
+      "minOrder": 1,
+      "canBeSold": true,
+      "pricePreFix": "CAD"
     }
+  }
 }
