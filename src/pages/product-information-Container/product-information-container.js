@@ -3,11 +3,19 @@ import "./product-information-container.scss";
 
 class ProductInformationContainer extends Component {
   render() {
-    // const { product } = this.props;
-    const productsArr = Object.keys(this.props.product);
-    console.log(productsArr);
-    return <div> product keys : {[productsArr[0]]}</div>;
+
+    const { product } = this.props;
+      return <div> product keys : {product.name}
+    </div>;
   }
 }
 
 export default ProductInformationContainer;
+
+
+// const productsArr = Object.keys(product);
+// const key = productsArr[0];
+
+
+//***render***:
+// product[key] ? product[key].name : "Loading...."
