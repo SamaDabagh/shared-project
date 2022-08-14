@@ -5,7 +5,6 @@ import "./product-information-page.scss";
 import ProductInformationContainer from "../product-information-Container/product-information-container";
 
 class ProductInformationPage extends Component {
-
   // constructor(props) {
   //   super(props);
   //   this.state = {
@@ -23,7 +22,7 @@ class ProductInformationPage extends Component {
     return fetch("http://localhost:4000/products")
       .then((response) => response.json())
       .then((data) => {
-        this.setState({products: data});
+        this.setState({ products: data });
       });
   }
 
@@ -35,7 +34,11 @@ class ProductInformationPage extends Component {
     return (
       <>
         <Header />
-        { product ? <ProductInformationContainer product={product} /> : "Loading...." }
+        {product ? (
+          <ProductInformationContainer product={product} />
+        ) : (
+          "Loading...."
+        )}
         <Footer />
       </>
     );

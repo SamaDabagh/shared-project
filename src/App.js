@@ -3,7 +3,7 @@ import ProductInformationPage from "./pages/product-information-page/product-inf
 function App() {
   return (
     <div className="App">
-      <ProductInformationPage code="1001" />
+      <ProductInformationPage code="5002" />
     </div>
   );
 }
