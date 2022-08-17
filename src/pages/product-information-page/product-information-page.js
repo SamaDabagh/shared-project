@@ -28,6 +28,7 @@ class ProductInformationPage extends Component {
 
   render() {
     const product = this.state.products[this.props.code];
+    const { code } = this.props;
 
     console.log("result: ", product);
 
@@ -35,7 +36,7 @@ class ProductInformationPage extends Component {
       <>
         <Header />
         {product ? (
-          <ProductInformationContainer product={product} />
+          <ProductInformationContainer product={product} item={code} />
         ) : (
           "Loading...."
         )}
