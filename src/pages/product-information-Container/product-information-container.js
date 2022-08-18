@@ -2,30 +2,19 @@ import { Component } from "react";
 import "./product-information-container.scss";
 
 class ProductInformationContainer extends Component {
-  state = {
-    numberOfItems: 0,
-    countOfWantedItems: 0,
+  
+  numberOfItems2 = 0;
+
+  handleIncreaseButton = (event) => {
+    this.numberOfItems2 = event.target.value;
   };
 
-  handleTotalItems = (event) => {
-    const { item } = this.props;
-
-    let countOfWantedItems = event.target.value;
-    this.setState({
-      countOfWantedItems,
-    });
-    console.log({ item, countOfWantedItems });
-    // return countOfWantedItems;
-  };
   handleAddToCart = () => {
     const { item } = this.props;
-    let { numberOfItems } = this.state;
-    ++numberOfItems;
-    this.setState({
-      numberOfItems: numberOfItems,
+    console.log({
+      item: item,
+      code: this.numberOfItems2
     });
-
-    console.log({ item, numberOfItems });
   };
 
   render() {
@@ -47,7 +36,7 @@ class ProductInformationContainer extends Component {
             <input
               className="counter"
               type="number"
-              onChange={this.handleTotalItems}
+              onChange={this.handleIncreaseButton}
               placeholder="0"
               min={0}
             />
