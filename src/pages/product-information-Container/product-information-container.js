@@ -3,17 +3,29 @@ import "./product-information-container.scss";
 
 class ProductInformationContainer extends Component {
   state = {
-    numberValue: 0,
+    numberOfItems: 0,
+    countOfWantedItems: 0,
   };
+
   totalItems = (event) => {
-    let { item } = this.props;
-    console.log(event.target.value);
-    let numberValue = event.target.value;
+    const { item } = this.props;
+
+    let countOfWantedItems = event.target.value;
     this.setState({
-      numberValue,
+      countOfWantedItems,
     });
-    console.log({ item, numberValue });
-    return numberValue;
+    console.log({ item, countOfWantedItems });
+    return countOfWantedItems;
+  };
+  addToCart = () => {
+    const { item } = this.props;
+    let { numberOfItems } = this.state;
+    ++numberOfItems;
+    this.setState({
+      numberOfItems: numberOfItems,
+    });
+
+    console.log({ item, numberOfItems });
   };
 
   render() {
@@ -38,7 +50,7 @@ class ProductInformationContainer extends Component {
               onChange={this.totalItems}
               placeholder="0"
             />
-            <button className="btn-addToCart" onClick={this.AddToCart}>
+            <button className="btn-addToCart" onClick={this.addToCart}>
               Add to cart +
             </button>
           </div>
