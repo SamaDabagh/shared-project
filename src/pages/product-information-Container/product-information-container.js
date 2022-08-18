@@ -7,7 +7,7 @@ class ProductInformationContainer extends Component {
     countOfWantedItems: 0,
   };
 
-  totalItems = (event) => {
+  handleTotalItems = (event) => {
     const { item } = this.props;
 
     let countOfWantedItems = event.target.value;
@@ -15,9 +15,9 @@ class ProductInformationContainer extends Component {
       countOfWantedItems,
     });
     console.log({ item, countOfWantedItems });
-    return countOfWantedItems;
+    // return countOfWantedItems;
   };
-  addToCart = () => {
+  handleAddToCart = () => {
     const { item } = this.props;
     let { numberOfItems } = this.state;
     ++numberOfItems;
@@ -47,10 +47,10 @@ class ProductInformationContainer extends Component {
             <input
               className="counter"
               type="number"
-              onChange={this.totalItems}
+              onChange={this.handlerTotalItems}
               placeholder="0"
             />
-            <button className="btn-addToCart" onClick={this.addToCart}>
+            <button className="btn-addToCart" onClick={this.handlerAddToCart}>
               Add to cart +
             </button>
           </div>
