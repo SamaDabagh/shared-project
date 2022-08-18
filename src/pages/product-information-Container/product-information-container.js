@@ -47,11 +47,11 @@ class ProductInformationContainer extends Component {
             <input
               className="counter"
               type="number"
-              onChange={this.handlerTotalItems}
+              onChange={this.handleTotalItems}
               placeholder="0"
               min={0}
             />
-            <button className="btn-addToCart" onClick={this.handlerAddToCart}>
+            <button className="btn-addToCart" onClick={this.handleAddToCart}>
               Add to cart +
             </button>
           </div>
