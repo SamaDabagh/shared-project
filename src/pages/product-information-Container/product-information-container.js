@@ -49,6 +49,7 @@ class ProductInformationContainer extends Component {
               type="number"
               onChange={this.handlerTotalItems}
               placeholder="0"
+              min={0}
             />
             <button className="btn-addToCart" onClick={this.handlerAddToCart}>
               Add to cart +
