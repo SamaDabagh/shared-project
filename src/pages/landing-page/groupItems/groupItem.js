@@ -1,14 +1,28 @@
 import { Component } from "react";
-import "./groupItem.scss";
 
 class GroupItems extends Component {
+
+  // {
+  //   name: "Health and beauty",
+  //   id: 1,
+  // } --> props.groupProduct
+
+
+  // Dafeye BAD
+
+  // {
+  //   name: "Health and beauty-2",
+  //   id: 2,
+  // }
+
   render() {
-    console.log("groups:", this.props.groupProduct);
-    const { name, id } = this.props.groupProduct;
+    console.log("props in groupItem :", this.props);
+    const { name, id } = this.props.group;
     return (
       <>
         <div>
-          <h2>{name}</h2>
+          <h2>Name: {name}</h2>
+          <p>Id: {id}</p>
         </div>
       </>
     );

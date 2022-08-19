@@ -1,3 +1,5 @@
+{/* Line 50, 56, 58 MUST be REMOVED, lines 51 to 55 must be commented in. */}
+
 import { Component } from "react";
 import Header from "../../header/header";
 import Footer from "../../footer/footer";
@@ -22,6 +24,10 @@ class ProductInformationPage extends Component {
         name: "Health and beauty",
         id: 1,
       },
+      {
+        name: "Health and beauty-2",
+        id: 2,
+      }
     ],
   };
 
@@ -37,7 +43,7 @@ class ProductInformationPage extends Component {
     const product = this.state.products[this.props.code];
     const { code } = this.props;
     const { tempGroups } = this.state;
-    console.log(tempGroups);
+    console.log('tempGroups in PIP------>: ', tempGroups);
 
     return (
       <>
