@@ -1,12 +1,10 @@
 import { Component } from "react";
 
 class GroupItems extends Component {
-
   // {
   //   name: "Health and beauty",
   //   id: 1,
   // } --> props.groupProduct
-
 
   // Dafeye BAD
 
@@ -17,7 +15,7 @@ class GroupItems extends Component {
 
   render() {
     console.log("props in groupItem :", this.props);
-    const { name, id } = this.props.group;
+    const { name, id } = this.props.groupOfProduct;
     return (
       <>
         <div>
