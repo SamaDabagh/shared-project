@@ -27,7 +27,7 @@ function App() {
       <Header />
 
       {/* <ProductInformationPage code="5002" /> */}
-      <LandingPage code="5002" />
+      <LandingPage />
 
       <Footer />
     </div>

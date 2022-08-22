@@ -1,6 +1,6 @@
 import { Component } from "react";
-import GroupItems from "../landing-page/groupItems/groupItem";
-import GroupItemList from "./group-items-list/group-items-list";
+import GroupItems from "../landing-page/groupItems/groupItems";
+import GroupItemsList from "./group-items-list/group-items-list";
 
 const URL_GROUPS_API = "http://localhost:4100/groups";
 const URL_PRODUCTS_API = "http://localhost:4000/products";
@@ -44,16 +44,9 @@ class LandingPage extends Component {
 
     return (
       <>
-        {groups.map((group) => {
-          console.log("group.id in LANDING PAGE------>: ", group.id);
-          console.log("group.name in LANDING PAGE------>: ", group.name);
-          return (
-            <section>
-              <GroupItems groupOfProduct={group} key={group.id} />
-              <GroupItemList sameGroupItems={filteredGroup} />
-            </section>
-          );
-        })}
+        <GroupItems groupOfProduct={groups} />
+
+        <GroupItemsList sameGroupItems={filteredGroup} />
       </>
     );
   }

@@ -1,6 +1,6 @@
 import { Component } from "react";
 
-class ItemInfos extends Component {
+class ItemInfo extends Component {
   render() {
     const { nameOfItem, PriceOfItem } = this.props;
     console.log("this.props.nameOfItem in ITEM-INFOS ---->", nameOfItem);
@@ -13,4 +13,4 @@ class ItemInfos extends Component {
   }
 }
 
-export default ItemInfos;
+export default ItemInfo;
