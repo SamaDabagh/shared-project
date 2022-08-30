@@ -1,0 +1,19 @@
+@import "../../sass/variables";
+
+.border-wrapper-LandingPage {
+  border: 1px solid $light-border;
+
+  .wrapper-LandingPage {
+    padding: 20px;
+    .container-GroupItems {
+      padding: 20px;
+    }
+    .container-GroupItemsList {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: auto;
+      gap: 30px;
+      padding: 20px;
+    }
+  }
+}

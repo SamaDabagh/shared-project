@@ -3,7 +3,30 @@ import "./header.scss";
 
 class Header extends Component {
   render() {
-    return <div className="header-container">I am header</div>;
+    return (
+      <header>
+        <div className="header-container">
+          <div className="header-grocery-name">
+            <div className="header-logo">
+              <img
+                src="https://www.wexfordbaseball.com/wp-content/uploads/2018/05/logo-metro.png"
+                alt="image-logo"
+              />
+            </div>
+            <h1>my grocer</h1>
+          </div>
+          <div className="header-right-side">
+            <div>
+              <button className="btn-management">Management</button>
+            </div>
+            <div className="cart">
+              <i></i>
+              <button className="btn-cart">Cart</button>
+            </div>
+          </div>
+        </div>
+      </header>
+    );
   }
 }
 export default Header;

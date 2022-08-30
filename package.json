@@ -19,7 +19,6 @@
     "eject": "react-scripts eject",
     "start:db-products": "json-server --watch ./database/products.json --port 4000",
     "start:db-groups": "json-server --watch ./database/groups.json --port 4100"
-
   },
   "browserslist": {
     "production": [

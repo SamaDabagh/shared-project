@@ -2,7 +2,6 @@ import { Component } from "react";
 import "./product-information-container.scss";
 
 class ProductInformationContainer extends Component {
-  
   numberOfItems2 = 0;
 
   handleIncreaseButton = (event) => {
@@ -13,7 +12,7 @@ class ProductInformationContainer extends Component {
     const { item } = this.props;
     console.log({
       item: item,
-      code: this.numberOfItems2
+      code: this.numberOfItems2,
     });
   };
 
@@ -21,31 +20,54 @@ class ProductInformationContainer extends Component {
     const { price, name, pricePreFix, canBeSold } = this.props.product;
 
     return (
-      <div className="product-Info-container">
-        <div>
-          <div className="font-container"> Name : {name}</div>
-          <div className="font-container">
-            Price({pricePreFix}) : {price}
-          </div>
-          {canBeSold ? (
-            <div className="font-container"> Available </div>
-          ) : (
-            <div> Unavailable </div>
-          )}
+      <>
+        <div className="container-ProductInformationContainer">
           <div>
-            <input
-              className="counter"
-              type="number"
-              onChange={this.handleIncreaseButton}
-              placeholder="0"
-              min={0}
+            <div>
+              <h1 className="productName-ProductInformationContainer">
+                <span> Product :</span> {name}
+              </h1>
+            </div>
+            <br />
+            <br />
+            <h2 className="productPrice-ProductInformationContainer">
+              <span>Price({pricePreFix}) :</span> {price}
+            </h2>
+            {canBeSold ? (
+              <div className="productAvailability-ProductInformationContainer">
+                Available
+              </div>
+            ) : (
+              <div> Unavailable </div>
+            )}
+            <br />
+            <br />
+            <div>
+              <input
+                className="counter-ProductInformationContainer"
+                type="number"
+                onChange={this.handleIncreaseButton}
+                placeholder="0"
+                min={0}
+              />
+              <button className="btn-addToCart" onClick={this.handleAddToCart}>
+                Add to cart +
+              </button>
+            </div>
+          </div>
+
+          <div className="wrapper-image-ProductInformationContainer">
+            <img
+              src=""
+              alt="product-image"
+              className="image-ProductInformationContainer"
             />
-            <button className="btn-addToCart" onClick={this.handleAddToCart}>
-              Add to cart +
-            </button>
           </div>
         </div>
-      </div>
+        <div>
+          <p className="image-ProductInformationContainer"></p>
+        </div>
+      </>
     );
   }
 }
