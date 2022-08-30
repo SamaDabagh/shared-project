@@ -1,6 +1,8 @@
+{
+  /* Line 50, 56, 58 MUST be REMOVED, lines 51 to 55 must be commented in. */
+}
+
 import { Component } from "react";
-import Header from "../../header/header";
-import Footer from "../../footer/footer";
 import "./product-information-page.scss";
 import ProductInformationContainer from "../product-information-Container/product-information-container";
 
@@ -19,7 +21,7 @@ class ProductInformationPage extends Component {
   };
 
   componentDidMount() {
-    return fetch("http://localhost:4000/products")
+    fetch("http://localhost:4000/products")
       .then((response) => response.json())
       .then((data) => {
         this.setState({ products: data });
@@ -30,17 +32,13 @@ class ProductInformationPage extends Component {
     const product = this.state.products[this.props.code];
     const { code } = this.props;
 
-    console.log("result: ", product);
-
     return (
       <>
-        <Header />
         {product ? (
           <ProductInformationContainer product={product} item={code} />
         ) : (
           "Loading...."
         )}
-        <Footer />
       </>
     );
   }

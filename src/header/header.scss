@@ -1,3 +1,69 @@
-.header-container {
-  height: 50px;
+@import "../sass/variables";
+@import "../sass/variables";
+@mixin btn {
+}
+
+header {
+  height: 150px;
+  padding: 10px 0px;
+  .header-container {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 20px;
+    background-color: #e31812;
+    padding: 20px;
+    border: 2px solid #e31812;
+
+    .header-grocery-name {
+      display: flex;
+      padding: 20px;
+      align-items: center;
+      .header-logo {
+        img {
+          height: 130px;
+          width: auto;
+        }
+      }
+      h1 {
+        color: #fff;
+        padding: 20px;
+      }
+    }
+    .header-right-side {
+      display: flex;
+      margin-right: 50px;
+
+      .btn-management {
+        margin-right: 50px;
+        padding: 10px 30px;
+        font-size: 16px;
+        font-weight: bold;
+        background-color: transparent;
+        color: #fff;
+        border-radius: 5px;
+        border: 1px solid #fff;
+        &:hover {
+          box-shadow: $dark-border 0px 7px 29px 0px;
+          font-weight: bolder;
+        }
+      }
+      .cart {
+        .btn-cart {
+          font-size: 16px;
+          font-weight: bold;
+          padding: 10px 30px;
+          background-color: transparent;
+          color: #fff;
+          border-radius: 5px;
+          border: 1px solid #fff;
+          &:hover {
+            box-shadow: $dark-border 0px 7px 29px 0px;
+            font-weight: bolder;
+          }
+        }
+      }
+    }
+  }
 }
