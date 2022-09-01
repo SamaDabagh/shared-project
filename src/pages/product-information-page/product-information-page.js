@@ -30,12 +30,16 @@ class ProductInformationPage extends Component {
 
   render() {
     const product = this.state.products[this.props.code];
-    const { code } = this.props;
+    const { code, handleAddToCartAmount } = this.props;
 
     return (
       <>
         {product ? (
-          <ProductInformationContainer product={product} item={code} />
+          <ProductInformationContainer
+            product={product}
+            item={code}
+            handleAddToCartAmount={handleAddToCartAmount}
+          />
         ) : (
           "Loading...."
         )}

@@ -3,6 +3,7 @@ import "./header.scss";
 
 class Header extends Component {
   render() {
+    const { cartItems } = this.props;
     return (
       <header>
         <div className="header-container">
@@ -21,7 +22,7 @@ class Header extends Component {
             </div>
             <div className="cart">
               <i></i>
-              <button className="btn-cart">Cart</button>
+              <button className="btn-cart">Cart {cartItems}</button>
             </div>
           </div>
         </div>
