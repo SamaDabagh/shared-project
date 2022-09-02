@@ -1,13 +1,13 @@
 @import "../../sass/variables";
 
-.container-ProductInformationContainer {
+.container-PIC {
   display: flex;
   justify-content: space-around;
   margin-bottom: 50px;
   padding: 20px;
   align-items: center;
 
-  .productPrice-ProductInformationContainer {
+  .productPrice-PIC {
     padding-bottom: 20px;
     color: $black;
     span {
@@ -16,7 +16,7 @@
       font-size: 24px;
     }
   }
-  .productName-ProductInformationContainer {
+  .productName-PIC {
     padding-bottom: 20px;
     color: $red;
 
@@ -26,46 +26,71 @@
       font-size: 24px;
     }
   }
-  .productAvailability-ProductInformationContainer {
+  .productAvailability-PIC {
     color: $black;
     font-size: 24px;
   }
-}
 
-.counter-ProductInformationContainer {
-  margin-top: 10px;
-  height: 30px;
-  border: 1px solid $black;
-  border-radius: 5px;
-  padding-left: 10px;
-}
+  .wrapper-image-PIC {
+    border: 1px solid $light-border;
+    border-radius: 20px;
+    width: 410px;
+    height: 410px;
+    background-color: $light-background-card;
 
-.wrapper-image-ProductInformationContainer {
-  border: 1px solid $light-border;
-  border-radius: 20px;
-  width: 410px;
-  height: 410px;
-  background-color: $light-background-card;
-
-  &:hover {
-    box-shadow: $dark-border 0px 7px 29px 0px;
+    &:hover {
+      box-shadow: $dark-border 0px 7px 29px 0px;
+    }
+    .image-PIC {
+    }
   }
-  .image-ProductInformationContainer {
-  }
-}
 
-.btn-addToCart {
-  margin-left: 70px;
-  margin-right: 50px;
-  padding: 10px 30px;
-  font-size: 16px;
-  font-weight: bold;
-  background-color: $red;
-  color: #fff;
-  border-radius: 5px;
-  border: 1px solid #fff;
-  &:hover {
-    box-shadow: $dark-border 0px 7px 29px 0px;
-    font-size: 17px;
+  .input-btn-container-PIC {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    .counter-PIC {
+      border: 1px solid $black;
+      border-radius: 5px;
+      padding-left: 10px;
+      width: 180px;
+      height: 36px;
+    }
+
+    .btn-addToCart {
+      width: 180px;
+      height: 40px;
+      margin-left: 70px;
+      margin-right: 50px;
+      padding: 20px 30px;
+      font-size: 16px;
+      font-weight: bold;
+      background-color: $red;
+      color: #fff;
+      border-radius: 5px;
+      border: 1px solid #fff;
+      padding-top: 10px;
+      &:hover {
+        box-shadow: $dark-border 0px 7px 29px 0px;
+        font-size: 17px;
+      }
+    }
+    .btn-addToCart-disabled {
+      width: 180px;
+      height: 40px;
+      margin-left: 70px;
+      margin-right: 50px;
+      padding: 20px 30px;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
+      background-color: rgba(100, 100, 111, 0.2);
+      color: #fff;
+      border-radius: 5px;
+      border: 1px solid;
+      border: 1px solid $black;
+      border-radius: 5px;
+      padding-top: 10px;
+    }
   }
 }
