@@ -7,7 +7,8 @@
       "reducedPrice": "12.99",
       "minOrder": 1,
       "canBeSold": true,
-      "pricePreFix": "CAD"
+      "pricePreFix": "CAD",
+      "imageUrl": "https://images.costco-static.com/ImageDelivery/imageService?profileId=12026539&imageId=170547-894__1&recipeName=350"
     },
     "1002": {
       "name": "Kirkland Shampoo",
@@ -16,7 +17,8 @@
       "reducedPrice": "12.49",
       "minOrder": 2,
       "canBeSold": true,
-      "pricePreFix": "CAD"
+      "pricePreFix": "CAD",
+      "imageUrl": "https://images.costco-static.com/ImageDelivery/imageService?profileId=12026539&imageId=348196-894__1&recipeName=350"
     },
     "1003": {
       "name": "Safeblend Foam Soap",
@@ -25,7 +27,8 @@
       "reducedPrice": "64.99",
       "minOrder": 1,
       "canBeSold": false,
-      "pricePreFix": "CAD"
+      "pricePreFix": "CAD",
+      "imageUrl": "https://images.costco-static.com/ImageDelivery/imageService?profileId=12026539&itemId=407636-894&recipeName=680"
     },
     "2001": {
       "name": "Pokemon Orbeetle",
@@ -34,7 +37,8 @@
       "reducedPrice": "28.99",
       "minOrder": 1,
       "canBeSold": true,
-      "pricePreFix": "CAD"
+      "pricePreFix": "CAD",
+      "imageUrl": "https://images.costco-static.com/ImageDelivery/imageService?profileId=12026539&imageId=1629861-894__1&recipeName=350"
     },
     "2002": {
       "name": "Eurographics 2-pack Puzzle Set",
@@ -43,25 +47,28 @@
       "reducedPrice": "33.89",
       "minOrder": 1,
       "canBeSold": true,
-      "pricePreFix": "CAD"
+      "pricePreFix": "CAD",
+      "imageUrl": "https://images.costco-static.com/ImageDelivery/imageService?profileId=12026539&itemId=1581375-894&recipeName=680"
     },
     "3001": {
       "name": "Kirkland Yogurt",
-      "group": 1,
+      "group": 3,
       "price": "4.99",
       "reducedPrice": "3.99",
       "minOrder": 1,
       "canBeSold": true,
-      "pricePreFix": "CAD"
+      "pricePreFix": "CAD",
+      "imageUrl": "https://images.costco-static.com/ImageDelivery/imageService?profileId=12026539&itemId=319075-894&recipeName=680"
     },
     "3002": {
       "name": "Almond Milk",
-      "group": 1,
+      "group": 3,
       "price": "3.99",
       "reducedPrice": "0.99",
       "minOrder": 1,
       "canBeSold": false,
-      "pricePreFix": "CAD"
+      "pricePreFix": "CAD",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0599/5983/6823/products/1002374-894__1_1024x.jpg?v=1644714186"
     },
     "4001": {
       "name": "Asus Zenbook 4",
@@ -70,16 +77,18 @@
       "reducedPrice": "1399.99",
       "minOrder": 1,
       "canBeSold": true,
-      "pricePreFix": "CAD"
+      "pricePreFix": "CAD",
+      "imageUrl": "https://images.costco-static.com/ImageDelivery/imageService?profileId=12026539&itemId=1457182-894&recipeName=680"
     },
     "4002": {
       "name": "Macbook pro 2000",
-      "group": 1,
+      "group": 4,
       "price": "3999.79",
       "reducedPrice": "3799.79",
       "minOrder": 1,
       "canBeSold": true,
-      "pricePreFix": "CAD"
+      "pricePreFix": "CAD",
+      "imageUrl": "https://images.costco-static.com/ImageDelivery/imageService?profileId=12026539&imageId=4000036480-894__1&recipeName=350"
     },
     "5001": {
       "name": "LG TV",
@@ -88,7 +97,8 @@
       "reducedPrice": "899.89",
       "minOrder": 1,
       "canBeSold": true,
-      "pricePreFix": "CAD"
+      "pricePreFix": "CAD",
+      "imageUrl": "https://images.costco-static.com/ImageDelivery/imageService?profileId=12026539&imageId=9912055-894__1&recipeName=350"
     },
     "5002": {
       "name": "Samsung TV",
@@ -97,7 +107,8 @@
       "reducedPrice": "1099.89",
       "minOrder": 1,
       "canBeSold": false,
-      "pricePreFix": "CAD"
+      "pricePreFix": "CAD",
+      "imageUrl": "https://images.costco-static.com/ImageDelivery/imageService?profileId=12026539&itemId=5308165-894&recipeName=680"
     },
     "6001": {
       "name": "IKEA Sofa set",
@@ -106,7 +117,8 @@
       "reducedPrice": "4099.99",
       "minOrder": 1,
       "canBeSold": true,
-      "pricePreFix": "CAD"
+      "pricePreFix": "CAD",
+      "imageUrl": "https://www.ikea.com/ca/en/images/products/uppland-sofa-totebo-light-beige__0818572_pe774494_s5.jpg?f=xl"
     },
     "6002": {
       "name": "Tomasville Dining Table",
@@ -115,7 +127,8 @@
       "reducedPrice": "3099.99",
       "minOrder": 1,
       "canBeSold": true,
-      "pricePreFix": "CAD"
+      "pricePreFix": "CAD",
+      "imageUrl": "https://images.costco-static.com/ImageDelivery/imageService?profileId=12026539&itemId=1635357-894&recipeName=680"
     }
   }
 }
