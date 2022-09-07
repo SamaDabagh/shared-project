@@ -34,9 +34,9 @@ class LandingPage extends Component {
       <div className="border-wrapper-LandingPage">
         {groups.map((group) => {
           return (
-            <section className="wrapper-LandingPage">
+            <section className="wrapper-LandingPage" key={group.id}>
               <div className="container-GroupItems">
-                <GroupItems groupOfProduct={group} key={group.id} />
+                <GroupItems groupOfProduct={group} />
               </div>
               <div className="container-GroupItemsList">
                 <GroupItemsList productsInfo={productsInfo} index={group.id} />

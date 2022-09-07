@@ -1,7 +1,7 @@
 import { Component } from "react";
-import "./item-infos.scss";
+import "./PIP-ItemInfos.scss";
 
-class ItemInfos extends Component {
+class PIPItemInfos extends Component {
   render() {
     const { nameOfItem, PriceOfItem, imageOfItem } = this.props;
     return (
@@ -27,4 +27,4 @@ class ItemInfos extends Component {
   }
 }
 
-export default ItemInfos;
+export default PIPItemInfos;
