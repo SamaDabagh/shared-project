@@ -1,6 +1,6 @@
 import { Component } from "react";
 import "./product-list-page.scss";
-import PIPItemInfos from "./PIP-ItemInfos/PIP-ItemInfos";
+import PIPItemInfos from "./PLP-ItemInfos/PLP-ItemInfos";
 import PIPGroupItems from "../landing-page/groupItems/groupItems";
 
 const URL_GROUPS_API = "http://localhost:4100/groups";
@@ -56,13 +56,13 @@ class ProductListPage extends Component {
     return (
       <div className="PLP-border-wrapper">
         <div className="PLP-container">
-          <section className="PLP-wrapper">
-            <div className="container-GroupItems">
-              {filteredGroup[0] && (
-                <PIPGroupItems groupOfProduct={filteredGroup[0]} />
-              )}
-            </div>
+          <div className="container-GroupItems">
+            {filteredGroup[0] && (
+              <PIPGroupItems groupOfProduct={filteredGroup[0]} />
+            )}
+          </div>
 
+          <section className="PLP-wrapper">
             <div
               key={filteredProducts.id}
               className="PLP-container-GroupItemsList"

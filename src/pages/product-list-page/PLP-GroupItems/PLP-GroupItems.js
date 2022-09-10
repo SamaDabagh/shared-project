@@ -1,12 +1,12 @@
 import { Component } from "react";
-import "./PIP-GroupItems.scss";
+import "./PLP-GroupItems.scss";
 
-class PIPGroupItems extends Component {
+class PLPGroupItems extends Component {
   render() {
     const { name, id } = this.props.groupOfProduct;
     return (
-      <div className="PIP-wrapper-GroupItems">
-        <img src="" alt="PIP_groups-image" className="PIP-image-GroupItems" />
+      <div className="PLP-wrapper-GroupItems">
+        <img src="" alt="PLP_groups-image" className="PLP-image-GroupItems" />
         <h1>
           {name}
           <span>
@@ -17,4 +17,4 @@ class PIPGroupItems extends Component {
     );
   }
 }
-export default PIPGroupItems;
+export default PLPGroupItems;
