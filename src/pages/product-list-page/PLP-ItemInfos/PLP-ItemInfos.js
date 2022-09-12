@@ -1,7 +1,7 @@
 import { Component } from "react";
-import "./item-infos.scss";
+import "./PLP-ItemInfos.scss";
 
-class ItemInfos extends Component {
+class PLPItemInfos extends Component {
   render() {
     const { nameOfItem, PriceOfItem, imageOfItem } = this.props;
     return (
@@ -27,4 +27,4 @@ class ItemInfos extends Component {
   }
 }
 
-export default ItemInfos;
+export default PLPItemInfos;
