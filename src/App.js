@@ -4,6 +4,7 @@ import LandingPage from "./pages/landing-page/landing-page";
 import Header from "./header/header";
 import Footer from "./footer/footer";
 import ProductListPage from "./pages/product-list-page/product-list-page";
+import { Routes, Route } from "react-router-dom";
 
 class App extends Component {
   state = { cartItems: null };
@@ -11,21 +12,20 @@ class App extends Component {
   handleAddToCartAmount = (addToCartAmount) => {
     this.setState({ cartItems: addToCartAmount });
   };
-
+  
   render() {
     return (
-      <div className="App">
+      <>
         <Header cartItems={this.state.cartItems} />
+        <Routes>
+            <Route path="/home" element={<LandingPage />} />
+            <Route path="/products/:id" element={<ProductInformationPage />} />
+            <Route path="/groups/:code" element={<ProductListPage />} />
 
-        {/* <ProductInformationPage
-          code="1002"
-          handleAddToCartAmount={this.handleAddToCartAmount}
-        /> */}
-        {/* <LandingPage /> */}
-        <ProductListPage gr={4} />
-
+            {/* <ProductListPage gr={6} /> */}
+        </Routes>
         <Footer />
-      </div>
+      </>
     );
   }
 }
