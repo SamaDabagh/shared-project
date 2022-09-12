@@ -1,43 +1,31 @@
-{
-  /* Line 50, 56, 58 MUST be REMOVED, lines 51 to 55 must be commented in. */
-}
-
-import { Component } from "react";
+import { useState, useEffect } from "react";
 import "./product-information-page.scss";
 import ProductInformationContainer from "../product-information-Container/product-information-container";
+import {useParams} from 'react-router-dom';
 
-class ProductInformationPage extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     products: {},
-  //   };
-  //   console.log(this.state.products);
-  //   console.log("this.props: ", this.props.code);
-  // }
+const ProductInformationPage = (props) => {
 
-  state = {
-    products: {},
-  };
+  const [products, setProducts] = useState({});
 
-  componentDidMount() {
+  const { id } = useParams();
+
+  useEffect( () => {
     fetch("http://localhost:4000/products")
       .then((response) => response.json())
-      .then((data) => {
-        this.setState({ products: data });
-      });
-  }
+      .then((data) => setProducts(data));
+  }, []);
 
-  render() {
-    const product = this.state.products[this.props.code];
-    const { code, handleAddToCartAmount } = this.props;
+
+  const { handleAddToCartAmount } = props;
+  const product = products[id];
 
     return (
       <>
-        {product ? (
+        {
+        product ? (
           <ProductInformationContainer
             product={product}
-            item={code}
+            item={id}
             handleAddToCartAmount={handleAddToCartAmount}
           />
         ) : (
@@ -45,6 +33,6 @@ class ProductInformationPage extends Component {
         )}
       </>
     );
-  }
 }
+
 export default ProductInformationPage;
