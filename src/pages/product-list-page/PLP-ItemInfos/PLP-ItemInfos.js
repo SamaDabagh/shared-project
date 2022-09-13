@@ -1,30 +1,33 @@
-import { Component } from "react";
 import "./PLP-ItemInfos.scss";
+import { Link } from "react-router-dom";
 
-class PLPItemInfos extends Component {
-  render() {
-    const { nameOfItem, PriceOfItem, imageOfItem } = this.props;
-    return (
-      <div
-        className="card-content-ItemInfos"
-        onMouseOver={this.handleOnMouseOver}
-      >
-        <div className="card-body-ItemInfos">
-          <div>
-            <h3>{nameOfItem}</h3>
-          </div>
-          <div>
-            <p>Price : {PriceOfItem}</p>
-          </div>
+const PLPItemInfos = ({
+  nameOfItem,
+  PriceOfItem,
+  imageOfItem,
+  handleOnMouseOver,
+}) => {
+  return (
+    <Link
+      className="card-content-ItemInfos"
+      to="/products/:id"
+      onMouseOver={handleOnMouseOver}
+    >
+      <div className="card-body-ItemInfos">
+        <div>
+          <h3>{nameOfItem}</h3>
         </div>
-        <img
-          className="card-image-ItemInfos"
-          src={imageOfItem}
-          alt="product-Image"
-        />
+        <div>
+          <p>Price : {PriceOfItem}</p>
+        </div>
       </div>
-    );
-  }
-}
+      <img
+        className="card-image-ItemInfos"
+        src={imageOfItem}
+        alt="product-Image"
+      />
+    </Link>
+  );
+};
 
 export default PLPItemInfos;

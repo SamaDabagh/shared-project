@@ -22,7 +22,8 @@ class PIC extends Component {
   };
 
   render() {
-    const { price, name, pricePreFix, canBeSold } = this.props.product;
+    const { price, name, pricePreFix, canBeSold, imageUrl } =
+      this.props.product;
 
     return (
       <>
@@ -73,7 +74,7 @@ class PIC extends Component {
           </div>
 
           <div className="wrapper-image-PIC">
-            <img src="" alt="product-image" className="image-PIC" />
+            <img src={imageUrl} alt="product-image" className="image-PIC" />
           </div>
         </div>
         <div>
