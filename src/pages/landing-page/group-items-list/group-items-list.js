@@ -9,7 +9,7 @@ class GroupItemsList extends Component {
     );
     return (
       <>
-        {filteredGroup.map((items) => {
+        {filteredGroup?.map((items) => {
           const { name, price, imageUrl } = items;
           return (
             <div className="card-container-GroupItemsList">
