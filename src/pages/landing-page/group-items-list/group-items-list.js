@@ -1,29 +1,36 @@
-import { Component } from "react";
 import ItemInfos from "../item-info/item-info";
 
-class GroupItemsList extends Component {
-  render() {
-    const { productsInfo, index } = this.props;
-    const filteredGroup = productsInfo?.filter(
-      (product) => product?.group === index
-    );
-    return (
-      <>
-        {filteredGroup?.map((items) => {
-          const { name, price, imageUrl } = items;
-          return (
-            <div className="card-container-GroupItemsList">
-              <ItemInfos
-                nameOfItem={name}
-                PriceOfItem={price}
-                imageOfItem={imageUrl}
-              />
-            </div>
-          );
-        })}
-      </>
-    );
-  }
-}
+const GroupItemsList = ({ index, products }) => {
+  const temp = Object.values(products);
+  const productsKeys = Object.keys(products);
+  const productsInfo = temp.map((element, index) => {
+    return { ...element, id: `${productsKeys[index]}` };
+  });
+
+  console.log("temp====>", temp);
+  console.log("productsInfo===>", productsInfo);
+  const filteredGroup = productsInfo?.filter(
+    (product) => product?.group === index
+  );
+  console.log("filteredGroup==>", filteredGroup);
+  return (
+    <>
+      {filteredGroup?.map((item) => {
+        const { name, price, imageUrl, id } = item;
+
+        return (
+          <div className="card-container-GroupItemsList">
+            <ItemInfos
+              nameOfItem={name}
+              PriceOfItem={price}
+              imageOfItem={imageUrl}
+              idOfItem={id}
+            />
+          </div>
+        );
+      })}
+    </>
+  );
+};
 
 export default GroupItemsList;

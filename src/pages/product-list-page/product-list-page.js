@@ -8,57 +8,56 @@ const URL_GROUPS_API = "http://localhost:4100/groups";
 const URL_PRODUCTS_API = "http://localhost:4000/products";
 
 const ProductListPage = (props) => {
-  console.log("props====>", props);
   const [groups, setGroups] = useState([]);
   const [products, setProducts] = useState({});
-  const { code } = useParams;
+  const { code } = useParams();
 
   useEffect(() => {
     fetch(URL_PRODUCTS_API)
       .then((response) => response.json())
       .then((data) => {
-        return setProducts({ products: data });
+        setProducts(data);
       });
     fetch(URL_GROUPS_API)
       .then((response) => response.json())
       .then((groups) => {
-        return setGroups([groups]);
+        setGroups(groups);
       });
   }, []);
 
-  console.log("gr ---->", code);
+  const temp = Object.values(products);
+  const productsKeys = Object.keys(products);
+  const productsInfo = temp.map((element, index) => {
+    return { ...element, id: `${productsKeys[index]}` };
+  });
 
-  // console.log("groups ---->", groups);
-  // console.log("products ---->", products);
-  const productsInfo = Object.values(products);
   // console.log("productsInfo ---->", productsInfo);
-  const filteredProducts = productsInfo.filter((productInfo) => {
+  const filteredProducts = productsInfo?.filter((productInfo) => {
     // console.log("productInfo ======>", productInfo);
-    // console.log("productInfo.group ======>", productInfo.group);
+    // console.log("productInfo.group ======>", typeof productInfo.group);
+    // console.log("code ======>", typeof code);
+
     // productInfo.group === gr
     //   ? console.log("selected-productInfo======>", productInfo)
     //   : console.log("selected-productInfo======>", "Noting");
-    if (productInfo.group === code) {
+    if (productInfo.group === +code) {
       return productInfo;
     }
   });
-  const group = groups[code];
 
   // console.log("filteredProducts ======>", filteredProducts);
 
-  const filteredGroup = groups.filter((group) => {
+  const filteredGroup = groups.find((group) => {
     const { name, id } = group;
-    if (id === code) return group;
+    if (id === +code) return group;
   });
-  // console.log("filteredGroup ======>", filteredGroup[0]?.name);
+  // console.log("filteredGroup ======>", filteredGroup?.name);
 
   return (
     <div className="PLP-border-wrapper">
       <div className="PLP-container">
         <div className="container-GroupItems">
-          {filteredGroup[0] && (
-            <PIPGroupItems groupOfProduct={filteredGroup[0]} />
-          )}
+          {filteredGroup && <PIPGroupItems groupOfProduct={filteredGroup} />}
         </div>
 
         <section className="PLP-wrapper">
@@ -67,14 +66,16 @@ const ProductListPage = (props) => {
             className="PLP-container-GroupItemsList"
           >
             {filteredProducts.map((filteredProduct) => {
-              const { name, price, imageUrl } = filteredProduct;
+              const { name, price, imageUrl, id } = filteredProduct;
 
               return (
                 <div className="PLP-card--container">
                   <PIPItemInfos
+                    key={filteredProducts.id}
                     nameOfItem={name}
                     PriceOfItem={price}
                     imageOfItem={imageUrl}
+                    idOfItem={id}
                   />
                 </div>
               );

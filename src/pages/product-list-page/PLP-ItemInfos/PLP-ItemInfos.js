@@ -1,17 +1,14 @@
 import "./PLP-ItemInfos.scss";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-const PLPItemInfos = ({
-  nameOfItem,
-  PriceOfItem,
-  imageOfItem,
-  handleOnMouseOver,
-}) => {
+const PLPItemInfos = ({ nameOfItem, PriceOfItem, imageOfItem, idOfItem }) => {
+  const navigate = useNavigate();
   return (
-    <Link
+    <div
       className="card-content-ItemInfos"
-      to="/products/:id"
-      onMouseOver={handleOnMouseOver}
+      onClick={() => {
+        navigate(`/products/${idOfItem}`);
+      }}
     >
       <div className="card-body-ItemInfos">
         <div>
@@ -26,7 +23,7 @@ const PLPItemInfos = ({
         src={imageOfItem}
         alt="product-Image"
       />
-    </Link>
+    </div>
   );
 };
 
