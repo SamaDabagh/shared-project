@@ -20,7 +20,14 @@ class App extends Component {
         <Header cartItems={this.state.cartItems} />
         <Routes>
           <Route path="/" element={<LandingPage />} />
-          <Route path="/products/:id" element={<ProductInformationPage />} />
+          <Route
+            path="/products/:id"
+            element={
+              <ProductInformationPage
+                handleAddToCartAmount={this.handleAddToCartAmount}
+              />
+            }
+          />
           <Route path="/groups/:code" element={<ProductListPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
