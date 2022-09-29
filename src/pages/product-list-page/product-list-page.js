@@ -69,7 +69,7 @@ const ProductListPage = (props) => {
               const { name, price, imageUrl, id } = filteredProduct;
 
               return (
-                <div className="PLP-card--container">
+                <div className="PLP-card--container" key={id}>
                   <PIPItemInfos
                     key={filteredProducts.id}
                     nameOfItem={name}

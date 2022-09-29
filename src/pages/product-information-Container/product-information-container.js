@@ -3,7 +3,7 @@ import "../../sass/_variables.scss";
 
 const PIC = ({ item, handleAddToCartAmount, product, group }) => {
   let numberOfItems2 = 0;
-
+  console.log("group===>", group);
   const handleIncreaseButton = (event) => {
     product.canBeSold && event.target.value <= 5
       ? (numberOfItems2 = +event.target.value)
@@ -18,7 +18,7 @@ const PIC = ({ item, handleAddToCartAmount, product, group }) => {
     });
   };
 
-  const { price, name, pricePreFix, canBeSold, imageUrl } = product;
+  const { price, name, pricePreFix, canBeSold, imageUrl, id } = product;
 
   return (
     <>
@@ -33,7 +33,7 @@ const PIC = ({ item, handleAddToCartAmount, product, group }) => {
           <div>
             <h2>
               <p className="productPrice-PIC">
-                {group.name} : group {group.id}
+                {group?.name} : group {group?.id}
               </p>
             </h2>
           </div>

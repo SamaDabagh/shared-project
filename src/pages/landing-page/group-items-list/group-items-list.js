@@ -19,7 +19,7 @@ const GroupItemsList = ({ index, products }) => {
         const { name, price, imageUrl, id } = item;
 
         return (
-          <div className="card-container-GroupItemsList">
+          <div className="card-container-GroupItemsList" key={id}>
             <ItemInfos
               nameOfItem={name}
               PriceOfItem={price}
